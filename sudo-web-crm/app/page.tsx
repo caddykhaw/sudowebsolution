@@ -1,5 +1,7 @@
 // app/page.tsx
-import Header from "@/components/header.tsx";
+import Header from "@/components/header";
+import { Button } from "@/components/ui/button"; // Add this line
+import Link from "next/link";
 
 export default function Home() {
   return (
