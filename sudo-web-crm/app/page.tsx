@@ -94,7 +94,7 @@ export default function Home() {
               size="lg"
               variant="outline"
               asChild
-              className="border-white text-white hover:bg-white/10 transform hover:scale-105 transition-all duration-300"
+              className="border-white text-white bg-indigo hover:bg-white/10 transform hover:scale-105 transition-all duration-300"
             >
               <Link href="#portfolio">View Our Work</Link>
             </Button>
