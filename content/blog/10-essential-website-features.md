@@ -1,7 +1,7 @@
 ---
 title: "10 Essential Features Every Business Website Should Have"
 excerpt: "Discover the key elements that make a business website effective at attracting and converting visitors into customers."
-coverImage: "/api/placeholder/800/400"
+coverImage: "images/2025/web-features-cover.png"
 date: "2025-03-03"
 author:
   name: "David Lee"
