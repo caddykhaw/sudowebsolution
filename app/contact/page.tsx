@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import ContactForm from "@/components/contact-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -73,7 +74,6 @@ export default function Contact() {
     <div className="min-h-screen flex flex-col bg-gray-50">
       {/* Header */}
       <Header />
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-indigo-600 via-purple-500 to-pink-500 text-white py-24 overflow-hidden">
         <div
@@ -135,7 +135,6 @@ export default function Contact() {
           </svg>
         </div>
       </section>
-
       {/* Contact Form Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
@@ -218,134 +217,15 @@ export default function Contact() {
               variants={fadeIn}
               className="bg-gray-50 rounded-xl shadow-md p-8"
             >
-              {formSubmitted ? (
-                <div className="h-full flex flex-col items-center justify-center text-center py-10">
-                  <CheckCircle className="h-16 w-16 text-green-500 mb-6" />
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                    Message Sent!
-                  </h3>
-                  <p className="text-gray-600 mb-8">
-                    Thank you for reaching out. We'll get back to you as soon as
-                    possible.
-                  </p>
-                  <Button
-                    onClick={() => setFormSubmitted(false)}
-                    className="bg-indigo-600 hover:bg-indigo-700"
-                  >
-                    Send Another Message
-                  </Button>
-                </div>
-              ) : (
-                <>
-                  <h2 className="text-2xl font-bold mb-6 text-gray-800">
-                    Send Us a Message
-                  </h2>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label
-                          htmlFor="name"
-                          className="block text-sm font-medium text-gray-700 mb-1"
-                        >
-                          Full Name
-                        </label>
-                        <Input
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          placeholder="John Doe"
-                          required
-                          className="w-full p-3 border rounded-md"
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="email"
-                          className="block text-sm font-medium text-gray-700 mb-1"
-                        >
-                          Email Address
-                        </label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          placeholder="john@example.com"
-                          required
-                          className="w-full p-3 border rounded-md"
-                        />
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label
-                          htmlFor="phone"
-                          className="block text-sm font-medium text-gray-700 mb-1"
-                        >
-                          Phone Number (Optional)
-                        </label>
-                        <Input
-                          id="phone"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          placeholder="+1 (555) 123-4567"
-                          className="w-full p-3 border rounded-md"
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="subject"
-                          className="block text-sm font-medium text-gray-700 mb-1"
-                        >
-                          Subject
-                        </label>
-                        <Input
-                          id="subject"
-                          name="subject"
-                          value={formData.subject}
-                          onChange={handleChange}
-                          placeholder="Project Inquiry"
-                          required
-                          className="w-full p-3 border rounded-md"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="message"
-                        className="block text-sm font-medium text-gray-700 mb-1"
-                      >
-                        Your Message
-                      </label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        rows={6}
-                        placeholder="Tell us about your project, goals, and timeline..."
-                        required
-                        className="w-full p-3 border rounded-md"
-                      />
-                    </div>
-                    <Button
-                      type="submit"
-                      className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-md transition-colors"
-                    >
-                      Send Message
-                    </Button>
-                  </form>
-                </>
-              )}
+              <div className="max-w-xl mx-auto">
+                <ContactForm />
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Map Section */}
+      {/* Map Section 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -369,8 +249,8 @@ export default function Contact() {
             variants={fadeIn}
             className="rounded-xl overflow-hidden shadow-md max-w-5xl mx-auto h-96 bg-gray-200"
           >
-            {/* Replace this div with an actual map component if you have one, 
-                or keep it as a placeholder image */}
+            { Replace this div with an actual map component if you have one, 
+                or keep it as a placeholder image }
             <div className="w-full h-full flex items-center justify-center bg-gray-200">
               <img
                 src="/api/placeholder/1200/600"
@@ -381,7 +261,7 @@ export default function Contact() {
           </motion.div>
         </div>
       </section>
-
+              */}
       {/* Footer */}
       <Footer />
     </div>

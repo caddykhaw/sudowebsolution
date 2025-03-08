@@ -21,10 +21,10 @@ export default function Header() {
   // Define menu items once for both desktop and mobile
   const menuItems: MenuItem[] = [
     { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Portfolio", href: "/portfolio" },
     { label: "Blog", href: "/blog" },
-    { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -67,7 +67,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`text-sm font-medium transition-colors hover:text-indigo-500 ${
+              className={`text-sm font-medium transition-colors hover:text-black ${
                 isActive(item.href)
                   ? scrolled
                     ? "text-indigo-600"
@@ -134,7 +134,7 @@ export default function Header() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className={`text-base font-medium py-2 transition-colors hover:text-indigo-600 ${
+                      className={`text-base font-medium py-2 transition-colors hover:text-black ${
                         isActive(item.href)
                           ? "text-indigo-600 font-bold"
                           : "text-gray-800"
